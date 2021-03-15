@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 	BufferedReader br=null;
 	try {
-		 br = new BufferedReader(new FileReader("input.txt"));
+		 br = new BufferedReader(new FileReader(args[0]));
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
 	}
@@ -60,7 +60,7 @@ public class Main {
 			   continue;
 		   }
 		   
-		   throw new RuntimeException("Incorrect command specified "+line);
+		   System.out.println("Incorrect command specified, command: "+line);
 		}
 	} catch (IOException e) {
 		e.printStackTrace();
